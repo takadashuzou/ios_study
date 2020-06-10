@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "0B6BC7EC-BC29-45AB-A10F-4098ED4E1CBF"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "83134851-20B3-43D4-B219-4978D2D021F7"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DollerYen/ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "20"
+            endingLineNumber = "20"
+            landmarkName = "ViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "83134851-20B3-43D4-B219-4978D2D021F7 - 51a1aeeb3da3984a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "DollerYen.ViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; DollerYen.ViewController"
+                  moduleName = "DollerYen"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/takadashuuzou/Desktop/DollerYen/DollerYen/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "677">
+               </Location>
+               <Location
+                  uuid = "83134851-20B3-43D4-B219-4978D2D021F7 - 21650b7fda5fdd8e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "DollerYen.ViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;DollerYen.ViewController&gt;"
+                  moduleName = "DollerYen"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/takadashuuzou/Desktop/DollerYen/DollerYen/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "618">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
