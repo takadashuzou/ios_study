@@ -84,15 +84,12 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="Currency" destination="JUb-HT-zLX" id="KEI-8r-C3I"/>
-                        <outlet property="inputCurrency" destination="JUb-HT-zLX" id="Rd6-1c-68a"/>
-                        <outlet property="inputField" destination="w8N-1h-3sx" id="13Z-Gl-ZM9"/>
-                        <outlet property="rateLabel" destination="R9Y-dX-zco" id="DwR-1l-yLm"/>
-                        <outlet property="resultCrrency" destination="iH1-Zj-fMw" id="PZz-VC-3Se"/>
-                        <outlet property="resultLabel" destination="wEu-Ub-apF" id="p6q-hM-bJo"/>
-                        <outlet property="selecter" destination="CGP-Cy-daF" id="yzW-ld-3fU"/>
-                        <outlet property="selector" destination="CGP-Cy-daF" id="P7y-3R-4ba"/>
-                        <outletCollection property="inputCurrency" destination="w8N-1h-3sx" collectionClass="NSMutableArray" id="jE0-tu-3SJ"/>
+                        <outlet property="inputCurrency" destination="JUb-HT-zLX" id="EqB-65-oXL"/>
+                        <outlet property="rateLabel" destination="R9Y-dX-zco" id="mtL-Kf-XT8"/>
+                        <outlet property="resultCrrency" destination="wEu-Ub-apF" id="ali-CD-sQW"/>
+                        <outlet property="resultLabel" destination="iH1-Zj-fMw" id="JIL-n9-oFn"/>
+                        <outlet property="selector" destination="CGP-Cy-daF" id="Zax-03-OeS"/>
+                        <outletCollection property="inputField" destination="w8N-1h-3sx" collectionClass="NSMutableArray" id="qfx-Dn-aHs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

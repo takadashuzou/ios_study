@@ -24,15 +24,15 @@ class ViewController: UIViewController {
     
 
     //入力値の通貨の単位を表示するラベル（円 or ドル）
-    @IBOutlet weak var Currency: UILabel!
+    @IBOutlet weak var inputCurrency: UILabel!
         //金額を入力するテキストフィールドのインスタンス
+ 
     @IBOutlet var inputField: [UITextField]!
-
+    
     //「ドル→円」or 「円→ドル」を選ぶためのSegmented Controlのインスタンス
    
     @IBOutlet weak var selector: UISegmentedControl!
     //通貨レートを表示するラベル
-   
     @IBOutlet weak var rateLabel: UILabel!
     //換算後の通貨の単位を表示するラベル（円 or ドル）
     @IBOutlet weak var resultCrrency: UILabel!
