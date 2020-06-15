@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ClapBeat" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" tag="-1" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PLw-GD-qmQ">
+                                <rect key="frame" x="15" y="408" width="384" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="PLw-GD-qmQ" secondAttribute="height" multiplier="24:5" id="aJf-PF-b5r"/>
+                                </constraints>
+                                <state key="normal" image="btn_play"/>
+                                <connections>
+                                    <action selector="play:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ele-PX-ozE"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_sound" translatesAutoresizingMaskIntoConstraints="NO" id="rD7-pW-qf2">
+                                <rect key="frame" x="150" y="104" width="114" height="114"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="rD7-pW-qf2" secondAttribute="height" multiplier="1:1" id="xRL-Cd-MuG"/>
+                                </constraints>
+                            </imageView>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ChT-Tf-tZi">
+                                <rect key="frame" x="7" y="646" width="400" height="216"/>
+                            </pickerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="手拍子の回数を選んでボタンをクリック" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y0w-e9-IVe">
+                                <rect key="frame" x="113" y="263" width="189" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="PLw-GD-qmQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="9pG-uy-LpP"/>
+                            <constraint firstItem="rD7-pW-qf2" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="60" id="JSo-ru-9gP"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="PLw-GD-qmQ" secondAttribute="trailing" constant="15" id="R4e-Em-aaG"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="y0w-e9-IVe" secondAttribute="trailing" constant="112" id="TTW-dd-w4e"/>
+                            <constraint firstItem="rD7-pW-qf2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="150" id="Vqh-VK-yr5"/>
+                            <constraint firstItem="PLw-GD-qmQ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="ZEE-xk-Tfy"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ChT-Tf-tZi" secondAttribute="trailing" constant="7" id="nCg-oB-RtF"/>
+                            <constraint firstItem="PLw-GD-qmQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="pGb-jg-vIo"/>
+                            <constraint firstItem="ChT-Tf-tZi" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="pQV-o2-kDd"/>
+                            <constraint firstItem="y0w-e9-IVe" firstAttribute="top" secondItem="rD7-pW-qf2" secondAttribute="bottom" constant="45" id="qoH-4B-xnp"/>
+                            <constraint firstItem="y0w-e9-IVe" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="113" id="sat-3g-d5a"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="rD7-pW-qf2" secondAttribute="trailing" constant="150" id="sbN-LP-ByX"/>
+                            <constraint firstItem="ChT-Tf-tZi" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="7" id="vWs-YR-awl"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="PickerView" destination="ChT-Tf-tZi" id="dA5-jD-a5v"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="137.94642857142856"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="btn_play" width="350" height="80"/>
+        <image name="img_sound" width="99" height="101"/>
+    </resources>
+</document>
