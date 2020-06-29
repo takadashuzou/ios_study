@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="pickerboard" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="ViewController" customModule="OriginalTimer2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" restorationIdentifier="pickerboard" translatesAutoresizingMaskIntoConstraints="NO" id="Ugr-Es-gFO">
+                                <rect key="frame" x="0.0" y="157" width="414" height="216"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="ffw-Zw-8l2"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="JWM-Jn-gwJ"/>
+                                </connections>
+                            </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uf0-U3-Uhs">
+                                <rect key="frame" x="161" y="670" width="92" height="30"/>
+                                <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="スタート">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="doneButtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KDy-0S-n0f"/>
+                                    <segue destination="Hse-JA-h88" kind="showDetail" identifier="toTimeView" id="YIM-8X-QsW"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eok-7a-Gka">
+                                <rect key="frame" x="184" y="502" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="button:" destination="BYZ-38-t0r" eventType="touchUpInside" id="L51-E3-5EA"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Ugr-Es-gFO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="2FZ-jD-HG1"/>
+                            <constraint firstItem="Eok-7a-Gka" firstAttribute="top" secondItem="Ugr-Es-gFO" secondAttribute="bottom" constant="129" id="Hua-CH-aZW"/>
+                            <constraint firstItem="Ugr-Es-gFO" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="113" id="JS9-9J-BWm"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="uf0-U3-Uhs" secondAttribute="trailing" constant="146" id="Uox-59-uDU"/>
+                            <constraint firstItem="Eok-7a-Gka" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="184" id="Ywp-N3-tlA"/>
+                            <constraint firstItem="uf0-U3-Uhs" firstAttribute="top" secondItem="Ugr-Es-gFO" secondAttribute="bottom" constant="298" id="bya-IH-cVp"/>
+                            <constraint firstItem="Ugr-Es-gFO" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="eLS-Zd-bwz"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Eok-7a-Gka" secondAttribute="trailing" constant="184" id="fvv-7F-LLM"/>
+                            <constraint firstItem="uf0-U3-Uhs" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="176" id="wl5-3H-skI"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="timepicker" destination="Ugr-Es-gFO" id="67i-Wo-Al2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <exit id="T9k-a8-ntE" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="108.69565217391305" y="137.94642857142856"/>
+        </scene>
+        <!--Timer View Controller-->
+        <scene sceneID="bQ3-lP-NuU">
+            <objects>
+                <viewController storyboardIdentifier="timer" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Hse-JA-h88" customClass="TimerViewController" customModule="OriginalTimer2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" restorationIdentifier="timer" id="tcV-gR-ndk">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m0O-RF-hSI">
+                                <rect key="frame" x="136" y="628" width="114" height="30"/>
+                                <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="リセット">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="ResetButton:" destination="Hse-JA-h88" eventType="touchUpInside" id="iuN-5T-sRZ"/>
+                                    <segue destination="T9k-a8-ntE" kind="unwind" unwindAction="backViewWithSegue:" id="5ud-CY-wB2"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UtH-jv-kKy" userLabel="TimerLabel">
+                                <rect key="frame" x="186" y="142" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="85N-7Q-PyH">
+                                <rect key="frame" x="276" y="502" width="62" height="30"/>
+                                <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="ストップ">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="StopButon:" destination="Hse-JA-h88" eventType="touchUpInside" id="TcX-iw-dJJ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eWy-PW-3Gr">
+                                <rect key="frame" x="30" y="499" width="62" height="30"/>
+                                <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="スタート">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="StartButton:" destination="Hse-JA-h88" eventType="touchUpInside" id="gbi-yF-uyP"/>
+                                    <action selector="doneButtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gTc-u7-n28"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="80h-4N-zXA">
+                                <rect key="frame" x="30" y="40" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="backButton:" destination="Hse-JA-h88" eventType="touchUpInside" id="JWU-mo-dh6"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <accessibility key="accessibilityConfiguration" identifier="timer"/>
+                        <constraints>
+                            <constraint firstItem="UtH-jv-kKy" firstAttribute="leading" secondItem="uIv-ND-3iQ" secondAttribute="leading" constant="186" id="8Ii-el-eHl"/>
+                            <constraint firstItem="80h-4N-zXA" firstAttribute="leading" secondItem="uIv-ND-3iQ" secondAttribute="leading" constant="30" id="8fV-K8-LfJ"/>
+                            <constraint firstItem="UtH-jv-kKy" firstAttribute="top" secondItem="uIv-ND-3iQ" secondAttribute="top" constant="142" id="9sv-OH-BzD"/>
+                            <constraint firstItem="m0O-RF-hSI" firstAttribute="leading" secondItem="uIv-ND-3iQ" secondAttribute="leading" constant="136" id="TIj-w5-rmP"/>
+                            <constraint firstItem="85N-7Q-PyH" firstAttribute="leading" secondItem="eWy-PW-3Gr" secondAttribute="trailing" constant="184" id="bxN-hp-aa1"/>
+                            <constraint firstItem="eWy-PW-3Gr" firstAttribute="leading" secondItem="uIv-ND-3iQ" secondAttribute="leading" constant="30" id="fNT-E5-SXw"/>
+                            <constraint firstItem="85N-7Q-PyH" firstAttribute="top" secondItem="uIv-ND-3iQ" secondAttribute="top" constant="502" id="i7I-yG-XmN"/>
+                            <constraint firstItem="uIv-ND-3iQ" firstAttribute="bottom" secondItem="eWy-PW-3Gr" secondAttribute="bottom" constant="279" id="n3h-su-X9Q"/>
+                            <constraint firstItem="uIv-ND-3iQ" firstAttribute="trailing" secondItem="85N-7Q-PyH" secondAttribute="trailing" constant="76" id="oDc-sj-6Oj"/>
+                            <constraint firstItem="uIv-ND-3iQ" firstAttribute="bottom" secondItem="m0O-RF-hSI" secondAttribute="bottom" constant="150" id="pwu-ha-H3x"/>
+                            <constraint firstItem="uIv-ND-3iQ" firstAttribute="trailing" secondItem="m0O-RF-hSI" secondAttribute="trailing" constant="164" id="qni-yI-bfX"/>
+                            <constraint firstItem="uIv-ND-3iQ" firstAttribute="trailing" secondItem="UtH-jv-kKy" secondAttribute="trailing" constant="186" id="vE6-gq-Jyg"/>
+                            <constraint firstItem="80h-4N-zXA" firstAttribute="top" secondItem="uIv-ND-3iQ" secondAttribute="top" constant="40" id="whb-Pd-mnL"/>
+                            <constraint firstItem="85N-7Q-PyH" firstAttribute="top" secondItem="UtH-jv-kKy" secondAttribute="bottom" constant="339" id="wyZ-wc-nZb"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="uIv-ND-3iQ"/>
+                    </view>
+                    <connections>
+                        <outlet property="TimerLabel" destination="UtH-jv-kKy" id="Cgf-Xs-1oe"/>
+                        <outlet property="timerLabel" destination="UtH-jv-kKy" id="r5R-4k-QcL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RqI-ml-sbC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="908" y="143"/>
+        </scene>
+    </scenes>
+</document>
